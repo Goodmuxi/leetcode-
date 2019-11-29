@@ -1,7 +1,8 @@
-package top1
+package test
 
 import (
 	"reflect"
+	"src/algorithm/topInterview/top1"
 	"testing"
 )
 
@@ -26,7 +27,7 @@ func TestTwoSum(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := TwoSum(tt.args.num, tt.args.target); !reflect.DeepEqual(got, tt.want) {
+			if got := top1.TwoSum(tt.args.num, tt.args.target); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("twoSum() = %v, want %v", got, tt.want)
 			}
 		})
